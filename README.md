@@ -1,15 +1,21 @@
-# [![Pug - Node Template Engine](https://cdn.rawgit.com/pugjs/pug-logo/3ea2d3a86c6227020dd5b20743a5aa458808ca4e/SVG/__pug-logo-colour-wide.svg)](http://jade-lang.com/)
 
-> Pug has been recently re-named from Jade.  The website and documentation are still being updated, but if you're new to pug, you should install the pug package on npm.
+> Jade has been recently re-named to Jaide. Beacuse I think the name is terrible
+and the community was not consulted on this change I've forked the project and
+renamed in to jaide. I'm going to to my best to keep up this repo up to date and
+maintain compatibility with .jade files.
+
+> Note that this readme still needs a once over to revert the name changes. I'll
+also try to fork the old docs site and update it with any changes from the
+primary project.
 
 Full documentation is at [jade-lang.com](http://jade-lang.com/)
 
- Pug is a high performance template engine heavily influenced by [Haml](http://haml.info/)
+ Jaide is a high performance template engine heavily influenced by [Haml](http://haml.info/)
  and implemented with JavaScript for [node](http://nodejs.org) and browsers. For bug reports,
  feature requests and questions, [open an issue](https://github.com/pugjs/pug/issues/new).
  For discussion join the [chat room](https://gitter.im/pugjs/pug).
 
- You can test drive Pug online [here](http://jade-lang.com/).
+ You can test drive Jaide online [here](http://jade-lang.com/).
 
  [![Build Status](https://img.shields.io/travis/pugjs/pug/master.svg?style=flat)](https://travis-ci.org/pugjs/pug)
  [![Coverage Status](https://img.shields.io/coveralls/pugjs/pug/master.svg?style=flat)](https://coveralls.io/r/pugjs/pug?branch=master)
@@ -23,12 +29,12 @@ Full documentation is at [jade-lang.com](http://jade-lang.com/)
 via npm:
 
 ```bash
-$ npm install pug
+$ npm install jaide
 ```
 
 ## Syntax
 
-Pug is a clean, whitespace sensitive syntax for writing html.  Here is a simple example:
+Jaide is a clean, whitespace sensitive syntax for writing html.  Here is a simple example:
 
 ```pug
 doctype html
@@ -38,14 +44,14 @@ html(lang="en")
     script(type='text/javascript').
       if (foo) bar(1 + 5)
   body
-    h1 Pug - node template engine
+    h1 Jaide - node template engine
     #container.col
-      if youAreUsingPug
+      if youAreUsingJaide
         p You are amazing
       else
         p Get on it!
       p.
-        Pug is a terse and simple templating language with a
+        Jaide is a terse and simple templating language with a
         strong focus on performance and powerful features.
 ```
 
@@ -56,39 +62,39 @@ becomes
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pug</title>
+    <title>Jaide</title>
     <script type="text/javascript">
       if (foo) bar(1 + 5)
     </script>
   </head>
   <body>
-    <h1>Pug - node template engine</h1>
+    <h1>Jaide - node template engine</h1>
     <div id="container" class="col">
       <p>You are amazing</p>
-      <p>Pug is a terse and simple templating language with a strong focus on performance and powerful features.</p>
+      <p>Jaide is a terse and simple templating language with a strong focus on performance and powerful features.</p>
     </div>
   </body>
 </html>
 ```
 
-The official [Pug tutorial](http://jade-lang.com/tutorial/) is a great place to start.
+The official [Jaide tutorial](http://jade-lang.com/tutorial/) is a great place to start.
 
 ## API
 
 For full API, see [jade-lang.com/api](http://jade-lang.com/api/)
 
 ```js
-var pug = require('pug');
+var jaide = require('jaide');
 
 // compile
-var fn = pug.compile('string of pug', options);
+var fn = pug.compile('string of jaide', options);
 var html = fn(locals);
 
 // render
-var html = pug.render('string of pug', merge(options, locals));
+var html = pug.render('string of jaide', merge(options, locals));
 
 // renderFile
-var html = pug.renderFile('filename.pug', merge(options, locals));
+var html = pug.renderFile('filename.jaide', merge(options, locals));
 ```
 
 ### Options
@@ -99,12 +105,12 @@ var html = pug.renderFile('filename.pug', merge(options, locals));
 
 ## Browser Support
 
- The latest version of pug can be download for the browser in standalone form from [here](https://raw.githubusercontent.com/pugjs/pug/1.11.0/pug.js).  It only supports the very latest browsers though, and is a large file.  It is recommended that you pre-compile your pug templates to JavaScript and then just use the [runtime.js](https://raw.githubusercontent.com/pugjs/pug/1.11.0/runtime.js) library on the client.
+ The latest version of jaide can be download for the browser in standalone form from [here](https://raw.githubusercontent.com/pugjs/pug/1.11.0/pug.js).  It only supports the very latest browsers though, and is a large file.  It is recommended that you pre-compile your jaide templates to JavaScript and then just use the [runtime.js](https://raw.githubusercontent.com/pugjs/pug/1.11.0/runtime.js) library on the client.
 
  To compile a template for use on the client using the command line, do:
 
 ```console
-$ pug --client --no-debug filename.pug
+$ jaide --client --no-debug filename.jaide
 ```
 
 which will produce `filename.js` containing the compiled template.
@@ -114,23 +120,23 @@ which will produce `filename.js` containing the compiled template.
 After installing the latest version of [node](http://nodejs.org/), install with:
 
 ```console
-$ npm install pug-cli -g
+$ npm install jaide-cli -g
 ```
 
 and run with
 
 ```console
-$ pug --help
+$ jaide --help
 ```
 
 ## Additional Resources
 
 Tutorials:
 
-  - cssdeck interactive [Pug syntax tutorial](http://cssdeck.com/labs/learning-the-jade-templating-engine-syntax)
-  - cssdeck interactive [Pug logic tutorial](http://cssdeck.com/labs/jade-templating-tutorial-codecast-part-2)
-  - [Pug について。](https://gist.github.com/japboy/5402844) (A Japanese Tutorial)
-  - [Pug - 模板引擎](https://github.com/pugjs/pug/blob/master/Readme_zh-cn.md)
+  - cssdeck interactive [Jaide syntax tutorial](http://cssdeck.com/labs/learning-the-jade-templating-engine-syntax)
+  - cssdeck interactive [Jaide logic tutorial](http://cssdeck.com/labs/jade-templating-tutorial-codecast-part-2)
+  - [Jaide について。](https://gist.github.com/japboy/5402844) (A Japanese Tutorial)
+  - [Jaide - 模板引擎](https://github.com/pugjs/pug/blob/master/Readme_zh-cn.md)
 
 Implementations in other languages:
 
@@ -148,7 +154,7 @@ Other:
   - [Coda/SubEtha syntax Mode](https://github.com/aaronmccall/jade.mode)
   - [html2pug](https://github.com/donpark/html2jade) converter
   - [pug2php](https://github.com/SE7ENSKY/jade2php) converter
-  - [Pug Server](https://github.com/ded/jade-server)  Ideal for building local prototypes apart from any application
+  - [Jaide Server](https://github.com/ded/jade-server)  Ideal for building local prototypes apart from any application
 
 ## License
 
